@@ -1,0 +1,85 @@
+/*  Style de la navbar */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    padding: 0.5vh 2vw;
+    box-shadow: 0vh 0.25vh 1.25vh rgba(0, 0, 0, 0.1);
+
+    .logo {
+        height: 6.5vw;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-link {
+        margin: auto 0;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2.5vw;
+            
+            li {
+                
+                a {
+                    text-decoration: none;
+                    position: relative;
+                    color: #5A7F54;
+                    font-size: 1.35vw;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -3vh;
+                        height: 0.5vh; /* Hauteur de la barre */
+                        background-color:#5a7f5482; /* Couleur de la barre */
+                        width: 100%;
+                        visibility: hidden;
+                        transition: 0.2s ;
+                    }
+
+                    &:hover::before {
+                        background-color: #5A7F54;
+                        top: -1vh;
+                        visibility: visible;
+                        transition: 0.5s;
+                    }
+                }
+
+                .contact {
+                    padding: 2vh 2.5vw;
+                    border-radius: 0 5vw 5vw 5vw;
+                    color: white;
+                    background-color: #5A7F54;
+                    border: none;
+
+                    &:hover {
+                        background-color: #51714c;
+                    }
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-link-mobile {
+    display: none;
+}
+
+/*  Style de la navbar */

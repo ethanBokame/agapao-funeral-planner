@@ -1,0 +1,40 @@
+/* Style du surnous */
+
+.denous {
+    color: #5A7F54;
+    text-align: center;
+
+    p {
+        font-size: 2.5vw;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        margin-top: 5vh;
+
+    }
+}
+
+.container-nous {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+    font-size: 1.39vw;
+    padding: 5vh 5vw;
+
+
+    .section {
+
+        h2 {
+            color: #5A7F54;
+        }
+
+        p {
+            line-height: 4.5vh;
+        }
+        
+    }
+}
+
+/* Style du surnous */

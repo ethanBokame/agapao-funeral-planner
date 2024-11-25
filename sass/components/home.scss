@@ -1,0 +1,547 @@
+/*syle de la page home*/
+
+.first-bg-image-home-computer {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* ou une autre hauteur appropriée */
+    overflow: hidden;
+    
+}
+
+.background-image {
+    
+    opacity: 30%;
+    position: absolute;
+    top: 58vh;
+    left: 50%;
+    width: 62vw;
+    height: 83vh;
+    transform: translate(-50%, -50%) scale(1.4);
+    object-fit: cover;
+    z-index: -1; /* Placer l'image derrière le contenu */
+}
+
+.first-bg-image-home-computer-container {
+    background: linear-gradient(to top, #F1EFF0, transparent);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    color: white; /* Pour que le contenu soit lisible sur l'image */
+    padding-top: 17vh;
+    padding-bottom: 15.5vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        #p1 {
+            font-size: 2vw;
+            color: #223121;
+            width: 55vw;
+            font-family: "Petrona", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        #p2 {
+            font-size: 1.5vw;
+            width: 55vw;
+            color: #223121;
+            line-height: 5.5vh;
+
+            .gold {
+                color: #1c8819;
+                font-weight: bold;
+            }
+        }
+
+
+        a {
+            padding: 2.5vh 2.5vw;
+            width: 18.9vw;
+            border-radius: 0 5vw 5vw 5vw;
+            color: white;
+            background-color: #5A7F54;
+            border: none;
+            text-decoration: none;
+            font-size: 1.7vw;
+
+            &:hover {
+                background-color: #51714c;
+            }
+        }
+    }
+
+
+    .right {
+        margin-right: 2vw;
+        position: relative;
+        width: 35vw;
+        z-index: 1; /* Assurez-vous que .right a un z-index plus élevé */
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -20px; /* Ajustez la position verticale du fond */
+            right: -20px; /* Ajustez la position horizontale du fond */
+            width: 100%;
+            height: 100%;
+            background-color: #5A7F54; /* Couleur de fond */
+            z-index: 0; /* Assurez-vous que le pseudo-élément a un z-index plus bas */
+        }
+
+        .background-image2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("image/prestation.jpg");
+            background-size: cover;
+            background-position: center;
+            z-index: 1; /* L'image de fond doit être au-dessus du pseudo-élément */
+        }
+
+        a {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5vw;
+            padding: 2vh 1vw;
+            border: #5A7F54 solid 1px;
+            border-bottom: #d1a839 solid 2px;
+            margin: 2vh 2vw;
+            z-index: 2; /* Le lien doit être au même niveau ou plus haut que le conteneur */
+
+            &:hover {
+                border: #d1a839 solid 2px;
+                border-bottom: #d1a839 solid 2px;
+            }
+        }
+    }
+}
+
+.div2 {
+    display: none;
+}
+
+.body-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.39vw;
+    gap: 10vh;
+    z-index: 1;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+    .vision {
+
+        
+        .bodyy {
+            padding: 0vh 12vw;
+            .g2 {
+                display: flex;
+        
+                .vert2 {
+                    padding-left: 1.8vw;
+                    background-color: #5A7F54;
+                    margin-top: 3.5vh;
+                }
+                
+                .g1 {
+                    .vision-p {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #22ff0014;
+                        padding: 3vh 2vw;
+                
+                        #p1 {
+                            color:#223121;
+                            font-size: 2vw;
+                        }
+                
+                        #p2 {
+                            line-height: 5.5vh;
+                            color: #5A7F54;
+                
+                            .gold {
+                                color: #5A7F54;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+        
+                    .vert1 {
+                        padding: 1.8vh 0;
+                        background-color: #5A7F54;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .value {
+
+
+        
+
+        .bodyyy {
+            font-family: "Montserrat", sans-serif;
+            color: #5A7F54;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5vw;
+    
+            .home, .pro, .ecoute, .dispo, .conf {   
+                width: 30%;
+                padding: 0 5vw;
+
+                #title {
+                    font-weight: bold;
+                    font-size: 2vw;
+                }
+
+                img {
+                    height: 10vw;
+                }
+
+
+                .gold {
+                    color: #5A7F54;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .prestations {
+        
+        .bodyyyy {
+            display: flex;
+            flex-direction: column;
+            font-family: "Montserrat", sans-serif;
+            color: white;
+            gap: 5vh;
+
+
+            .prestaa {
+                display: flex;
+                flex-direction: column;
+                gap: 6vh;
+
+                .titre {
+                    margin: 0;
+                    padding: 0;
+                    color: #5A7F54;
+                    font-size: 2vw;
+                    font-weight: bold;
+                    font-family: "Petrona", serif;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                }
+
+                .prestation-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 5vw;
+                    align-items: center;
+
+                    @mixin background-style($url) {
+                        background-image: url($url);
+                        background-size: cover;
+                        background-position: center;
+                        position: relative;
+                        height: 40vh; // Hauteur par défaut
+                        width: 60vw;  // Largeur par défaut
+                        border-radius: 2vw 2vw 0 2vw ;
+                        transition: 0.3s;
+
+                        &:hover {
+                            transform: scale(1.1);
+                            transition: 0.3s;
+                            cursor:pointer;
+                        }
+                    
+                        p {
+                            color: white;
+                            font-size: 1.37vw;
+                            background-color: #5A7F54;
+                            border-radius: 3vw 0 0 0;
+                            padding: 1vh 1vw;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            margin: 0;
+                        }
+                    }
+
+                    .funeraire {
+                        @include background-style("image/ceremonie-fu.jpg");
+                    }
+
+                    .enterrement {
+                        @include background-style("image/enterrement.jpg");
+                    }
+
+                    .organisation {
+                        @include background-style("image/organisation.jpg");
+                    }
+
+                    .accompagnement {
+                        @include background-style("image/hand.jpg");
+                    }
+
+
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        color: #d1a839;
+                        text-decoration: none;
+                        font-size: 1.5vw;
+                        border: #d1a839 solid 2px;
+                        border-bottom: #d1a839 solid 2px;
+                        font-family: "Marcellus";
+                        height: 7vh;
+                        width: 15vw;
+                        padding-top: 3vh;
+    
+                        &:hover {
+
+                            color: white;
+                        }
+                    }
+                }
+
+
+            }
+
+            .formula {
+                display: flex;
+                flex-direction: column;
+                gap: 4vh;
+
+                .titre {
+                    margin: 0;
+                    padding: 0;
+                    color: #5A7F54;
+                    font-size: 2vw;
+                    font-weight: bold;
+                    font-family: "Petrona", serif;
+                    font-optical-sizing: auto;
+                    font-style: normal;
+                }
+
+                .formula-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 3vw;
+                    align-items: center;
+
+                    .presta-formula {
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        border-radius: 2vw;
+                        font-size: 1.39vw;
+                        background-color: #22ff0014;
+                        color: #5A7F54;
+                        padding: 1vh 0vw;
+
+                        ul.custom-list {
+                            list-style: none;
+                            padding-left: 0;
+                        }
+                        
+                        ul.custom-list li {
+                            position: relative;
+                            padding-top: 2vh;
+                            padding-left: 3vw; /* Adjust this value based on your icon size */
+                            text-align: left;
+                            margin: 0 2vw;
+                        }
+                        
+                        ul.custom-list li::before {
+                            padding-top: 2vh;
+                            content: "\f00c"; /* FontAwesome 'check' icon unicode */
+                            font-family: "Font Awesome 6 Free";
+                            font-weight: 900;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            color: green; /* You can change the color as needed */
+                        }
+
+                        p {
+                            top: 0;
+                            font-weight: bold;
+                            font-family: "Petrona", serif;
+                            font-optical-sizing: auto;
+                            font-style: normal;
+                            color: white;
+                            background-color: #223121;
+                            margin-top: -1vh;
+                            border-radius: 2vw 2vw 0vw 0vw;
+                            padding: 2vh 6vw;
+                            
+
+                        }
+
+                    }
+                }
+
+                    div {
+
+                    a {
+                        color: #d1a839;
+                        text-decoration: none;
+                        font-size: 1.5vw;
+                        border: #d1a839 solid 2px;
+                        border-bottom: #d1a839 solid 2px;
+                        font-family: "Marcellus";
+                        height: 7vh;
+                        width: 15vw;
+                        padding-top: 3vh;
+    
+                        &:hover {
+
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+    
+
+}
+
+.formula {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 7vh;
+
+    .titre {
+        margin: 0;
+        padding: 0;
+        color: #5A7F54;
+        font-size: 2vw;
+        font-weight: bold;
+        font-family: "Petrona", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        text-align: center;
+    }
+
+    .formula-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5vw;
+        align-items: center;
+
+        .presta-formula {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 2vw;
+            font-size: 1.39vw;
+            background-color: #22ff0014;
+            color: #5A7F54;
+            padding: 1vh 0vw;
+
+            ul.custom-list {
+                list-style: none;
+                padding-left: 0;
+            }
+            
+            ul.custom-list li {
+                position: relative;
+                padding-top: 2vh;
+                padding-left: 3vw; /* Adjust this value based on your icon size */
+                text-align: left;
+                margin: 0 2vw;
+            }
+            
+            ul.custom-list li::before {
+                padding-top: 2vh;
+                content: "\f00c"; /* FontAwesome 'check' icon unicode */
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900;
+                position: absolute;
+                left: 0;
+                top: 0;
+                color: green; /* You can change the color as needed */
+            }
+
+            p {
+                top: 0;
+                font-weight: bold;
+                font-family: "Petrona", serif;
+                font-optical-sizing: auto;
+                font-style: normal;
+                color: white;
+                background-color: #223121;
+                margin-top: -1vh;
+                border-radius: 2vw 2vw 0vw 0vw;
+                padding: 2vh 0vw;
+                text-align: center;
+                
+
+            }
+
+        }
+
+        #sur {
+            margin: auto 0;
+            height: 19vh;
+        }
+    }
+
+}
+
+.title-singulier {
+    color: #d1a839;
+    
+    p {
+        font-size: 2.5vw;
+    }
+
+    img {
+        height: 13vw;
+        margin-top: -11vh;
+        margin-bottom: -4vw;
+    }
+}
+
+.hvr-bounce-to-top:before {
+    background: #d1a839 !important;
+}
+
+/*syle de la page home*/

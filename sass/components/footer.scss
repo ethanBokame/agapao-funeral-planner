@@ -1,0 +1,118 @@
+/*Style du footer*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #5A7F54;
+    color: white;
+    padding: 5vh 0;
+    gap: 3vh;
+    font-size: 1.39vw;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .top {
+        text-align: center;
+
+        img {
+            height: 15vw;
+        }
+    }
+
+    .bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3vw;
+
+        .one {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #223121;
+            padding: 2vh 3vw;
+            border-radius: 2vw;
+            gap: 9vh;
+
+            img {
+                height: 2vw;
+            }
+
+            div {
+                display: flex;
+                gap: 0.5vw;
+
+                p {
+                    margin-top: auto;
+                }
+            }
+
+        }
+
+        .two {
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+
+            p {
+                font-weight: bold;
+            }
+
+            .link {
+                display: flex;
+                flex-direction: column;
+                gap: 1vh;
+                
+                a {
+                    text-decoration: none;
+                    color: rgba(255, 255, 255, 0.664);
+                }
+            }
+        }
+
+        .three {
+            display: flex;
+            flex-direction: column;
+            gap: 1vh;
+
+            p {
+                font-weight: bold;
+            }
+
+            img {
+                height: 2vw;
+            }
+
+            .link {
+                display: flex;
+                gap: 1vw;
+
+                a {
+                    padding: 1vh 0.7vw;
+                    border-radius: 50vw;
+                    background-color: white;
+
+                    img {
+                        padding-top: 0.5vh;
+                    }
+                }
+            }
+        }
+    }
+
+    hr {
+        margin: 0 3vw;
+        border: white solid 1px;
+    }
+
+    .sign {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3vw;
+    }
+
+}
+
+/*Style du footer*/

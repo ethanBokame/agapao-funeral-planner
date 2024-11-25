@@ -1,0 +1,37 @@
+@import "components/normalize.scss";
+
+@import "components/navbar.scss";
+
+@import "components/contact.scss";
+
+@import "components/home.scss";
+
+body {
+    margin: 0;
+    background-color: #F1EFF0;
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import "components/event.scss";
+
+@import "components/img-form.scss";
+
+@import "components/surnous.scss";
+
+@import "components/voir_presta.scss";
+
+@import "components/devis.scss";
+
+@import "components/footer.scss";
+
+@import "components/center-animation.scss";
+
+@import "components/tel.scss";
+
+@import "components/tablette.scss";
+
+@import "components/tablette2.scss";
+
+@import "components/tablette_landscape.scss";

@@ -1,0 +1,74 @@
+/* Style de la page contact */
+
+.fcontact {
+    background-color: #5A7F54;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    p {
+        font-size: 1.35vw;
+        margin: 0;
+    }
+    
+    .joignable {
+        text-align: center;
+        padding: 2vh 3vw;
+    }
+}
+
+.votreecoute {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url("image/contact.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.ecoute-container {
+    background: #5a7f5444;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    text-align: center;
+    padding: 6vh 6vw;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .e1-container {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0.5vw;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        margin-bottom: 25vh;
+    }
+
+    #e1 {
+        padding: 1vh 2vw;
+        color: #5A7F54;
+        font-size: 2vw;
+    }
+
+    #e2 {
+        color: white;
+        font-size: 4vw;
+        font-family: "Petrona", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    #e3 {
+        color: white;
+        font-size: 1.35vw;
+    }
+}
+
+
+/* Style de la page contact*/

@@ -1,0 +1,53 @@
+.prestation-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vw;
+    align-items: center;
+
+    @mixin background-style($url) {
+        background-image: url($url);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 33vh; // Hauteur par défaut
+        width: 30vw;  // Largeur par défaut
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+            cursor:pointer;
+        }
+    
+        p {
+            color: white;
+            font-size: 1.37vw;
+            background-color: #5A7F54;
+            border-radius: 3vw 0 0 0;
+            padding: 1vh 1vw;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+        }
+    }
+
+    .funeraire {
+        @include background-style("image/ceremonie-fu.jpg");
+    }
+
+    .enterrement {
+        @include background-style("image/enterrement.jpg");
+    }
+
+    .organisation {
+        @include background-style("image/organisation.jpg");
+    }
+
+    .accompagnement {
+        @include background-style("image/hand.jpg");
+    }
+
+
+}

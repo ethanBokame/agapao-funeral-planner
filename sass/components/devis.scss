@@ -1,0 +1,52 @@
+/*Style du devis*/
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+    gap: 3vh;
+    padding: 10vh 0;
+
+    p {
+        margin: 0;
+        padding: 0 3vw;
+        font-size: 1.5vw;
+        color: #5A7F54;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        gap: 3vh;
+    
+        textarea {
+            border-radius: 0vw;
+            resize: vertical;
+        }
+
+        #name, #email, #tel, textarea  {
+            border-radius: 0vw;
+            border: #5A7F54 solid 1.5px;
+            padding: 1.5vh;
+        }
+
+        #sub {
+            border-radius: 0vw;
+            background-color: #5A7F54;
+            color: white;
+            padding: 2vh;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #51714c;
+            }
+        }
+    }
+
+}
+
+/*Style du devis*/

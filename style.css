@@ -1,0 +1,2530 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+/* Reset and base styles */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+  background-color: #F1EFF0;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Form element styles */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.39vw;
+}
+
+button:focus,
+input:focus,
+optgroup:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+  font-family: "Marcellus", serif;
+  font-size: 1.2vw; /* Ajustez la taille selon vos besoins */
+  opacity: 1; /* Assurez-vous que le texte soit entièrement opaque */
+}
+
+/* Specific styles for iOS */
+@supports (-webkit-touch-callout: none) {
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 1.39vw; /* Ajustez la taille selon vos besoins */
+  }
+}
+/*  Style de la navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  padding: 0.5vh 2vw;
+  box-shadow: 0vh 0.25vh 1.25vh rgba(0, 0, 0, 0.1);
+}
+nav .logo {
+  height: 6.5vw;
+}
+nav .hamburger {
+  display: none;
+}
+nav .nav-link {
+  margin: auto 0;
+}
+nav .nav-link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2.5vw;
+}
+nav .nav-link ul li a {
+  text-decoration: none;
+  position: relative;
+  color: #5A7F54;
+  font-size: 1.35vw;
+}
+nav .nav-link ul li a::before {
+  content: "";
+  position: absolute;
+  top: -3vh;
+  height: 0.5vh; /* Hauteur de la barre */
+  background-color: rgba(90, 127, 84, 0.5098039216); /* Couleur de la barre */
+  width: 100%;
+  visibility: hidden;
+  transition: 0.2s;
+}
+nav .nav-link ul li a:hover::before {
+  background-color: #5A7F54;
+  top: -1vh;
+  visibility: visible;
+  transition: 0.5s;
+}
+nav .nav-link ul li .contact {
+  padding: 2vh 2.5vw;
+  border-radius: 0 5vw 5vw 5vw;
+  color: white;
+  background-color: #5A7F54;
+  border: none;
+}
+nav .nav-link ul li .contact:hover {
+  background-color: #51714c;
+}
+nav .nav-link ul li .contact::before {
+  display: none;
+}
+
+.nav-link-mobile {
+  display: none;
+}
+
+/*  Style de la navbar */
+/* Style de la page contact */
+.fcontact {
+  background-color: #5A7F54;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.fcontact p {
+  font-size: 1.35vw;
+  margin: 0;
+}
+.fcontact .joignable {
+  text-align: center;
+  padding: 2vh 3vw;
+}
+
+.votreecoute {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-image: url("image/contact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.ecoute-container {
+  background: rgba(90, 127, 84, 0.2666666667);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: center;
+  text-align: center;
+  padding: 6vh 6vw;
+}
+.ecoute-container p {
+  padding: 0;
+  margin: 0;
+}
+.ecoute-container .e1-container {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0.5vw;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  margin-bottom: 25vh;
+}
+.ecoute-container #e1 {
+  padding: 1vh 2vw;
+  color: #5A7F54;
+  font-size: 2vw;
+}
+.ecoute-container #e2 {
+  color: white;
+  font-size: 4vw;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.ecoute-container #e3 {
+  color: white;
+  font-size: 1.35vw;
+}
+
+/* Style de la page contact*/
+/*syle de la page home*/
+.first-bg-image-home-computer {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* ou une autre hauteur appropriée */
+  overflow: hidden;
+}
+
+.background-image {
+  opacity: 30%;
+  position: absolute;
+  top: 58vh;
+  left: 50%;
+  width: 62vw;
+  height: 83vh;
+  transform: translate(-50%, -50%) scale(1.4);
+  object-fit: cover;
+  z-index: -1; /* Placer l'image derrière le contenu */
+}
+
+.first-bg-image-home-computer-container {
+  background: linear-gradient(to top, #F1EFF0, transparent);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  color: white; /* Pour que le contenu soit lisible sur l'image */
+  padding-top: 17vh;
+  padding-bottom: 15.5vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+.first-bg-image-home-computer-container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.first-bg-image-home-computer-container .left p {
+  padding: 0;
+  margin: 0;
+}
+.first-bg-image-home-computer-container .left #p1 {
+  font-size: 2vw;
+  color: #223121;
+  width: 55vw;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.first-bg-image-home-computer-container .left #p2 {
+  font-size: 1.5vw;
+  width: 55vw;
+  color: #223121;
+  line-height: 5.5vh;
+}
+.first-bg-image-home-computer-container .left #p2 .gold {
+  color: #1c8819;
+  font-weight: bold;
+}
+.first-bg-image-home-computer-container .left a {
+  padding: 2.5vh 2.5vw;
+  width: 18.9vw;
+  border-radius: 0 5vw 5vw 5vw;
+  color: white;
+  background-color: #5A7F54;
+  border: none;
+  text-decoration: none;
+  font-size: 1.7vw;
+}
+.first-bg-image-home-computer-container .left a:hover {
+  background-color: #51714c;
+}
+.first-bg-image-home-computer-container .right {
+  margin-right: 2vw;
+  position: relative;
+  width: 35vw;
+  z-index: 1; /* Assurez-vous que .right a un z-index plus élevé */
+}
+.first-bg-image-home-computer-container .right::before {
+  content: "";
+  position: absolute;
+  bottom: -20px; /* Ajustez la position verticale du fond */
+  right: -20px; /* Ajustez la position horizontale du fond */
+  width: 100%;
+  height: 100%;
+  background-color: #5A7F54; /* Couleur de fond */
+  z-index: 0; /* Assurez-vous que le pseudo-élément a un z-index plus bas */
+}
+.first-bg-image-home-computer-container .right .background-image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("image/prestation.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1; /* L'image de fond doit être au-dessus du pseudo-élément */
+}
+.first-bg-image-home-computer-container .right a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5vw;
+  padding: 2vh 1vw;
+  border: #5A7F54 solid 1px;
+  border-bottom: #d1a839 solid 2px;
+  margin: 2vh 2vw;
+  z-index: 2; /* Le lien doit être au même niveau ou plus haut que le conteneur */
+}
+.first-bg-image-home-computer-container .right a:hover {
+  border: #d1a839 solid 2px;
+  border-bottom: #d1a839 solid 2px;
+}
+
+.div2 {
+  display: none;
+}
+
+.body-menu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.39vw;
+  gap: 10vh;
+  z-index: 1;
+}
+.body-menu p {
+  margin: 0;
+  padding: 0;
+}
+.body-menu .vision .bodyy {
+  padding: 0vh 12vw;
+}
+.body-menu .vision .bodyy .g2 {
+  display: flex;
+}
+.body-menu .vision .bodyy .g2 .vert2 {
+  padding-left: 1.8vw;
+  background-color: #5A7F54;
+  margin-top: 3.5vh;
+}
+.body-menu .vision .bodyy .g2 .g1 .vision-p {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(34, 255, 0, 0.0784313725);
+  padding: 3vh 2vw;
+}
+.body-menu .vision .bodyy .g2 .g1 .vision-p #p1 {
+  color: #223121;
+  font-size: 2vw;
+}
+.body-menu .vision .bodyy .g2 .g1 .vision-p #p2 {
+  line-height: 5.5vh;
+  color: #5A7F54;
+}
+.body-menu .vision .bodyy .g2 .g1 .vision-p #p2 .gold {
+  color: #5A7F54;
+  font-weight: bold;
+}
+.body-menu .vision .bodyy .g2 .g1 .vert1 {
+  padding: 1.8vh 0;
+  background-color: #5A7F54;
+  margin-left: 2vw;
+}
+.body-menu .value .bodyyy {
+  font-family: "Montserrat", sans-serif;
+  color: #5A7F54;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+}
+.body-menu .value .bodyyy .home, .body-menu .value .bodyyy .pro, .body-menu .value .bodyyy .ecoute, .body-menu .value .bodyyy .dispo, .body-menu .value .bodyyy .conf {
+  width: 30%;
+  padding: 0 5vw;
+}
+.body-menu .value .bodyyy .home #title, .body-menu .value .bodyyy .pro #title, .body-menu .value .bodyyy .ecoute #title, .body-menu .value .bodyyy .dispo #title, .body-menu .value .bodyyy .conf #title {
+  font-weight: bold;
+  font-size: 2vw;
+}
+.body-menu .value .bodyyy .home img, .body-menu .value .bodyyy .pro img, .body-menu .value .bodyyy .ecoute img, .body-menu .value .bodyyy .dispo img, .body-menu .value .bodyyy .conf img {
+  height: 10vw;
+}
+.body-menu .value .bodyyy .home .gold, .body-menu .value .bodyyy .pro .gold, .body-menu .value .bodyyy .ecoute .gold, .body-menu .value .bodyyy .dispo .gold, .body-menu .value .bodyyy .conf .gold {
+  color: #5A7F54;
+  font-weight: bold;
+}
+.body-menu .prestations .bodyyyy {
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  gap: 5vh;
+}
+.body-menu .prestations .bodyyyy .prestaa {
+  display: flex;
+  flex-direction: column;
+  gap: 6vh;
+}
+.body-menu .prestations .bodyyyy .prestaa .titre {
+  margin: 0;
+  padding: 0;
+  color: #5A7F54;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+  align-items: center;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire {
+  background-image: url("image/ceremonie-fu.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vh;
+  width: 60vw;
+  border-radius: 2vw 2vw 0 2vw;
+  transition: 0.3s;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement {
+  background-image: url("image/enterrement.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vh;
+  width: 60vw;
+  border-radius: 2vw 2vw 0 2vw;
+  transition: 0.3s;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation {
+  background-image: url("image/organisation.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vh;
+  width: 60vw;
+  border-radius: 2vw 2vw 0 2vw;
+  transition: 0.3s;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement {
+  background-image: url("image/hand.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vh;
+  width: 60vw;
+  border-radius: 2vw 2vw 0 2vw;
+  transition: 0.3s;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.body-menu .prestations .bodyyyy .prestaa div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body-menu .prestations .bodyyyy .prestaa div a {
+  color: #d1a839;
+  text-decoration: none;
+  font-size: 1.5vw;
+  border: #d1a839 solid 2px;
+  border-bottom: #d1a839 solid 2px;
+  font-family: "Marcellus";
+  height: 7vh;
+  width: 15vw;
+  padding-top: 3vh;
+}
+.body-menu .prestations .bodyyyy .prestaa div a:hover {
+  color: white;
+}
+.body-menu .prestations .bodyyyy .formula {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.body-menu .prestations .bodyyyy .formula .titre {
+  margin: 0;
+  padding: 0;
+  color: #5A7F54;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.body-menu .prestations .bodyyyy .formula .formula-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vw;
+  align-items: center;
+}
+.body-menu .prestations .bodyyyy .formula .formula-content .presta-formula {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2vw;
+  font-size: 1.39vw;
+  background-color: rgba(34, 255, 0, 0.0784313725);
+  color: #5A7F54;
+  padding: 1vh 0vw;
+}
+.body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+.body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list li {
+  position: relative;
+  padding-top: 2vh;
+  padding-left: 3vw; /* Adjust this value based on your icon size */
+  text-align: left;
+  margin: 0 2vw;
+}
+.body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list li::before {
+  padding-top: 2vh;
+  content: "\f00c"; /* FontAwesome 'check' icon unicode */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: green; /* You can change the color as needed */
+}
+.body-menu .prestations .bodyyyy .formula .formula-content .presta-formula p {
+  top: 0;
+  font-weight: bold;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  background-color: #223121;
+  margin-top: -1vh;
+  border-radius: 2vw 2vw 0vw 0vw;
+  padding: 2vh 6vw;
+}
+.body-menu .prestations .bodyyyy .formula div a {
+  color: #d1a839;
+  text-decoration: none;
+  font-size: 1.5vw;
+  border: #d1a839 solid 2px;
+  border-bottom: #d1a839 solid 2px;
+  font-family: "Marcellus";
+  height: 7vh;
+  width: 15vw;
+  padding-top: 3vh;
+}
+.body-menu .prestations .bodyyyy .formula div a:hover {
+  color: white;
+}
+
+.formula {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  padding: 7vh;
+}
+.formula .titre {
+  margin: 0;
+  padding: 0;
+  color: #5A7F54;
+  font-size: 2vw;
+  font-weight: bold;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+.formula .formula-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5vw;
+  align-items: center;
+}
+.formula .formula-content .presta-formula {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2vw;
+  font-size: 1.39vw;
+  background-color: rgba(34, 255, 0, 0.0784313725);
+  color: #5A7F54;
+  padding: 1vh 0vw;
+}
+.formula .formula-content .presta-formula ul.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+.formula .formula-content .presta-formula ul.custom-list li {
+  position: relative;
+  padding-top: 2vh;
+  padding-left: 3vw; /* Adjust this value based on your icon size */
+  text-align: left;
+  margin: 0 2vw;
+}
+.formula .formula-content .presta-formula ul.custom-list li::before {
+  padding-top: 2vh;
+  content: "\f00c"; /* FontAwesome 'check' icon unicode */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: green; /* You can change the color as needed */
+}
+.formula .formula-content .presta-formula p {
+  top: 0;
+  font-weight: bold;
+  font-family: "Petrona", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+  background-color: #223121;
+  margin-top: -1vh;
+  border-radius: 2vw 2vw 0vw 0vw;
+  padding: 2vh 0vw;
+  text-align: center;
+}
+.formula .formula-content #sur {
+  margin: auto 0;
+  height: 19vh;
+}
+
+.title-singulier {
+  color: #d1a839;
+}
+.title-singulier p {
+  font-size: 2.5vw;
+}
+.title-singulier img {
+  height: 13vw;
+  margin-top: -11vh;
+  margin-bottom: -4vw;
+}
+
+.hvr-bounce-to-top:before {
+  background: #d1a839 !important;
+}
+
+/*syle de la page home*/
+body {
+  margin: 0;
+  background-color: #F1EFF0;
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.image-container {
+  margin: 5vh 0;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap; /* Prevent line breaks */
+  background-color: #5A7F54;
+}
+
+.image-track {
+  padding-top: 2.5vh;
+  margin-bottom: 2vh;
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
+}
+
+.image-track img {
+  margin: 0 0.5vw;
+  width: 35vw;
+  height: 40vh;
+  display: inline-block;
+  border-radius: 2vw;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.title-event {
+  font-size: 2vw;
+}
+.title-event span {
+  color: #5A7F54;
+}
+
+.section-e {
+  text-align: center;
+  padding: 0 10vw;
+  padding-bottom: 2vh;
+}
+.section-e p {
+  line-height: 4vh;
+  font-size: 1.39vw;
+}
+.section-e .section-title {
+  font-size: 1.5vw;
+  color: #5A7F54;
+  font-weight: bold;
+  padding-bottom: 0;
+}
+
+.centered-paragraph {
+  text-align: center;
+  font-size: 1.5vw;
+  color: #5A7F54;
+  font-weight: bold;
+}
+
+.formula-content-img {
+  display: flex;
+  gap: 6vw;
+}
+.formula-content-img #img-form {
+  width: auto;
+  height: 45vh;
+  border-radius: 2vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto 0;
+}
+
+/* Style du surnous */
+.denous {
+  color: #5A7F54;
+  text-align: center;
+}
+.denous p {
+  font-size: 2.5vw;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-top: 5vh;
+}
+
+.container-nous {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+  font-size: 1.39vw;
+  padding: 5vh 5vw;
+}
+.container-nous .section h2 {
+  color: #5A7F54;
+}
+.container-nous .section p {
+  line-height: 4.5vh;
+}
+
+/* Style du surnous */
+.prestation-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3vw;
+  align-items: center;
+}
+.prestation-content .funeraire {
+  background-image: url("image/ceremonie-fu.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 33vh;
+  width: 30vw;
+  transition: 0.3s;
+}
+.prestation-content .funeraire:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.prestation-content .funeraire p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.prestation-content .enterrement {
+  background-image: url("image/enterrement.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 33vh;
+  width: 30vw;
+  transition: 0.3s;
+}
+.prestation-content .enterrement:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.prestation-content .enterrement p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.prestation-content .organisation {
+  background-image: url("image/organisation.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 33vh;
+  width: 30vw;
+  transition: 0.3s;
+}
+.prestation-content .organisation:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.prestation-content .organisation p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+.prestation-content .accompagnement {
+  background-image: url("image/hand.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 33vh;
+  width: 30vw;
+  transition: 0.3s;
+}
+.prestation-content .accompagnement:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.prestation-content .accompagnement p {
+  color: white;
+  font-size: 1.37vw;
+  background-color: #5A7F54;
+  border-radius: 3vw 0 0 0;
+  padding: 1vh 1vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+}
+
+/*Style du devis*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 3vh;
+  padding: 10vh 0;
+}
+.form-container p {
+  margin: 0;
+  padding: 0 3vw;
+  font-size: 1.5vw;
+  color: #5A7F54;
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  gap: 3vh;
+}
+.form-container form textarea {
+  border-radius: 0vw;
+  resize: vertical;
+}
+.form-container form #name, .form-container form #email, .form-container form #tel, .form-container form textarea {
+  border-radius: 0vw;
+  border: #5A7F54 solid 1.5px;
+  padding: 1.5vh;
+}
+.form-container form #sub {
+  border-radius: 0vw;
+  background-color: #5A7F54;
+  color: white;
+  padding: 2vh;
+  border: none;
+  cursor: pointer;
+}
+.form-container form #sub:hover {
+  background-color: #51714c;
+}
+
+/*Style du devis*/
+/*Style du footer*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #5A7F54;
+  color: white;
+  padding: 5vh 0;
+  gap: 3vh;
+  font-size: 1.39vw;
+}
+footer p {
+  margin: 0;
+  padding: 0;
+}
+footer .top {
+  text-align: center;
+}
+footer .top img {
+  height: 15vw;
+}
+footer .bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+footer .bottom .one {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #223121;
+  padding: 2vh 3vw;
+  border-radius: 2vw;
+  gap: 9vh;
+}
+footer .bottom .one img {
+  height: 2vw;
+}
+footer .bottom .one div {
+  display: flex;
+  gap: 0.5vw;
+}
+footer .bottom .one div p {
+  margin-top: auto;
+}
+footer .bottom .two {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+footer .bottom .two p {
+  font-weight: bold;
+}
+footer .bottom .two .link {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+footer .bottom .two .link a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.664);
+}
+footer .bottom .three {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+footer .bottom .three p {
+  font-weight: bold;
+}
+footer .bottom .three img {
+  height: 2vw;
+}
+footer .bottom .three .link {
+  display: flex;
+  gap: 1vw;
+}
+footer .bottom .three .link a {
+  padding: 1vh 0.7vw;
+  border-radius: 50vw;
+  background-color: white;
+}
+footer .bottom .three .link a img {
+  padding-top: 0.5vh;
+}
+footer hr {
+  margin: 0 3vw;
+  border: white solid 1px;
+}
+footer .sign {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+
+/*Style du footer*/
+.center-to-outer {
+  opacity: 0;
+  width: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 10s ease-out, opacity 10s ease-out;
+}
+
+.aos-animate.center-to-outer {
+  opacity: 1;
+  width: 13%;
+}
+
+/* Téléphones (jusqu'à 600px) */
+@media only screen and (max-width: 600px) {
+  /* Styles pour téléphones */
+  /* Style de la navbar */
+  nav {
+    padding: 3vh 3vw;
+    box-shadow: 0vh 0.25vh 1.25vh rgba(0, 0, 0, 0.05);
+    margin-bottom: 1vh;
+  }
+  nav .logo {
+    height: 14vw;
+  }
+  nav .hamburger {
+    display: block;
+    height: 8vw;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  nav .nav-link {
+    display: none;
+  }
+  .nav-link-mobile {
+    background-color: rgb(255, 255, 255);
+    padding: 2vh 0;
+  }
+  .nav-link-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: 4vw;
+  }
+  .nav-link-mobile ul li a {
+    text-decoration: none;
+    color: #5A7F54;
+    font-size: 4vw;
+  }
+  /* Style de la navbar */
+  /* Style de la page contact*/
+  .fcontact p {
+    font-size: 4vw;
+  }
+  .fcontact .joignable {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+  .fcontact .phone-join {
+    height: 4vw;
+    padding-bottom: 0.5vh;
+  }
+  .votreecoute {
+    height: 65vh;
+  }
+  .ecoute-container {
+    height: 65vh;
+    gap: 3vh;
+    padding: 4vh 6vw;
+  }
+  .ecoute-container p {
+    padding: 0;
+    margin: 0;
+  }
+  .ecoute-container .e1-container {
+    background: none; /* ou une autre couleur de fond */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    border-radius: 1vw;
+    margin-bottom: 22vh;
+  }
+  .ecoute-container #e1 {
+    padding: 1vh 2vw;
+    font-size: 3.5vw;
+  }
+  .ecoute-container #e2 {
+    font-size: 6.5vw;
+  }
+  .ecoute-container #e3 {
+    font-size: 3.5vw;
+  }
+  /* Style de la page contact*/
+  /*syle de la page home*/
+  .first-bg-image-home-computer {
+    position: relative;
+    width: 100%;
+    height: 73vh; /* ou une autre hauteur appropriée */
+  }
+  .background-image {
+    display: none;
+  }
+  .first-bg-image-home-computer-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    z-index: 0;
+    padding-top: 5vh;
+    padding-left: 0vw;
+    padding-right: 0vw;
+    gap: 10vh;
+    /*
+        .left {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        #p1 {
+            font-size: 3vw;
+            color: #223121;
+            width: 55vw;
+            font-family: "Petrona", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        #p2 {
+            font-size: 1.5vw;
+            width: 55vw;
+            color: #5A7F54;
+            line-height: 4vh;
+
+            .gold {
+                color: #2f4c2e;
+                font-weight: bold;
+            }
+        }*/
+  }
+  .first-bg-image-home-computer-container .left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    gap: 3vh;
+  }
+  .first-bg-image-home-computer-container .left p {
+    padding: 0;
+    margin: 0;
+  }
+  .first-bg-image-home-computer-container .left #p1 {
+    font-size: 6.7vw;
+    width: 90vw;
+  }
+  .first-bg-image-home-computer-container .left #p2 {
+    font-size: 4.7vw;
+    width: 80vw;
+    line-height: 4vh;
+  }
+  .first-bg-image-home-computer-container .left #p2 .gold {
+    font-weight: bold;
+  }
+  .first-bg-image-home-computer-container .right {
+    display: none;
+  }
+  .div2 {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 0vh;
+    padding-left: 9vw;
+  }
+  .div2 .div1 .right-mobile {
+    width: 80vw;
+    height: 30vh;
+    background-image: url("image/pasteur-afro-american.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .div2 .div1 .right-mobile a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 3.5vw; /* Ajusté pour mobile */
+    padding: 1vh 0.7vw;
+    border: #5A7F54 solid 1px;
+    border-bottom: #d1a839 solid 2px;
+    margin: 2vh 2vw;
+  }
+  .div2 .div1 .right-mobile a:hover {
+    border: #d1a839 solid 2px;
+    border-bottom: #d1a839 solid 2px;
+  }
+  .div2 .div1 .green1 {
+    height: 1.5vh;
+    background-color: #5A7F54;
+    width: 76vw;
+    margin-left: 4vw;
+  }
+  .div2 .green2 {
+    margin-top: 2vh;
+    height: 2vh;
+    background-color: #5A7F54;
+    height: 29.5vh;
+    width: 4.7vw;
+    margin-right: 7vw;
+  }
+  .body-menu {
+    margin-top: 3.5vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 4vw;
+    gap: 5vh;
+  }
+  .body-menu p {
+    margin: 0;
+    padding: 0;
+  }
+  .body-menu .title {
+    color: #d1a839;
+    font-size: 10vw;
+  }
+  .body-menu .title img {
+    height: 20vw;
+    margin-top: -4vh;
+    margin-bottom: -4vw;
+  }
+  .body-menu .vision .bodyy {
+    padding: 0vh 15vw;
+  }
+  .body-menu .vision .bodyy .g2 {
+    display: flex;
+  }
+  .body-menu .vision .bodyy .g2 .vert2 {
+    padding-left: 4vw;
+    margin-top: 3.5vh;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p {
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 5vw;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p #p2 {
+    line-height: 4vh;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vert1 {
+    padding: 1.3vh 0;
+    margin-left: 6vw;
+  }
+  .body-menu .value .bodyyy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vw;
+  }
+  .body-menu .value .bodyyy .home, .body-menu .value .bodyyy .pro, .body-menu .value .bodyyy .ecoute, .body-menu .value .bodyyy .dispo, .body-menu .value .bodyyy .conf {
+    line-height: 3.5vh;
+    width: 70vw;
+    padding: 0;
+  }
+  .body-menu .value .bodyyy .home #title, .body-menu .value .bodyyy .pro #title, .body-menu .value .bodyyy .ecoute #title, .body-menu .value .bodyyy .dispo #title, .body-menu .value .bodyyy .conf #title {
+    font-size: 6vw;
+  }
+  .body-menu .value .bodyyy .home img, .body-menu .value .bodyyy .pro img, .body-menu .value .bodyyy .ecoute img, .body-menu .value .bodyyy .dispo img, .body-menu .value .bodyyy .conf img {
+    height: 20vw;
+  }
+  .body-menu .prestations .bodyyyy {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    gap: 0vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .titre {
+    font-size: 5vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8vw;
+    align-items: center;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation {
+    height: 25vh;
+    width: 85vw;
+    border-radius: 0;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation p {
+    font-size: 4vw;
+    border-radius: 5vw 0 0 0;
+    padding: 0.7vh 3vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement {
+    height: 25vh;
+    width: 85vw;
+    border-radius: 0;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement p {
+    font-size: 4vw;
+    border-radius: 5vw 0 0 0;
+    padding: 0.7vh 3vw;
+  }
+  .body-menu .prestations .bodyyyy .formula {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .body-menu .prestations .bodyyyy .formula .titre {
+    font-size: 5vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vh;
+    align-items: center;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content #sur {
+    margin: 0 5vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula {
+    border-radius: 4vw;
+    font-size: 4vw;
+    padding: 1vh 0vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list li {
+    position: relative;
+    padding-top: 3vh;
+    padding-left: 5.5vw; /* Adjust this value based on your icon size */
+    margin: 0 4vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list li::before {
+    padding-top: 3vh;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula p {
+    border-radius: 4vw 4vw 0vw 0vw;
+    padding: 2vh 6vw;
+  }
+  .body-menu .prestations .bodyyyy .formula div a {
+    font-size: 3.5vw;
+    height: 4vh;
+    width: 25vw;
+    padding-top: 2vh;
+  }
+  .formula {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+  .formula .titre {
+    font-size: 5vw;
+  }
+  .formula .formula-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vh;
+    align-items: center;
+  }
+  .formula .formula-content #sur {
+    margin: 0 5vw;
+  }
+  .formula .formula-content .presta-formula {
+    border-radius: 4vw;
+    font-size: 4vw;
+    padding: 1vh 0vw;
+  }
+  .formula .formula-content .presta-formula ul.custom-list li {
+    position: relative;
+    padding-top: 3vh;
+    padding-left: 5.5vw; /* Adjust this value based on your icon size */
+    margin: 0 4vw;
+  }
+  .formula .formula-content .presta-formula ul.custom-list li::before {
+    padding-top: 3vh;
+  }
+  .formula .formula-content .presta-formula p {
+    border-radius: 4vw 4vw 0vw 0vw;
+    padding: 2vh 6vw;
+  }
+  .aos-animate.center-to-outer {
+    opacity: 1;
+    width: 20%;
+  }
+  .title-singulier p {
+    font-size: 6vw;
+    color: #d1a839;
+  }
+  .title-singulier img {
+    height: 20vw;
+    margin-top: -4vh;
+    margin-bottom: -4vw;
+  }
+  .div3 {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.7vh;
+    padding-left: 9vw;
+  }
+  .div3 .div1 .right-mobile {
+    width: 80vw;
+    height: 30vh;
+    position: relative;
+  }
+  .div3 .div1 .right-mobile a {
+    font-size: 3.5vw;
+    padding: 1vh 0.7vw;
+    border: #5A7F54 solid 1px;
+    border-bottom: #d1a839 solid 2px;
+    margin: 2vh 2vw;
+  }
+  .div3 .div1 .right-mobile a:hover {
+    border: #d1a839 solid 2px;
+    border-bottom: #d1a839 solid 2px;
+  }
+  .div3 .div1 .green1 {
+    height: 1.5vh;
+    width: 76vw;
+    margin-left: 4vw;
+  }
+  .div3 .green2 {
+    margin-top: 2vh;
+    height: 29.5vh;
+    width: 3.2vw;
+    margin-right: 7vw;
+  }
+  .decoration-flower1 {
+    display: flex;
+    text-align: center;
+    display: block;
+    margin-top: 4vh;
+    padding: 0;
+    flex-direction: column;
+    background-color: #5A7F54;
+  }
+  .decoration-flower1 img {
+    height: 10vh;
+  }
+  .decoration-flower1 p {
+    margin: 0;
+    padding: 0;
+    font-size: 5vw;
+    margin-bottom: -4vh;
+    color: #d1a839;
+  }
+  /*syle de la page home*/
+  /* Style du surnous */
+  .denous p {
+    font-size: 4.5vw;
+    margin-top: 5vh;
+    margin-bottom: -2vh;
+  }
+  .container-nous {
+    gap: 4vh;
+    font-size: 4vw;
+    padding: 5vh 7vw;
+  }
+  .container-nous .section p {
+    line-height: 4.5vh;
+  }
+  /* Style du surnous */
+  #img-form {
+    display: none;
+  }
+  /*Style du footer*/
+  footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #5A7F54;
+    color: white;
+    padding: 2vh 0;
+    gap: 0vh;
+    font-size: 4vw;
+  }
+  footer p {
+    margin: 0;
+    padding: 0;
+  }
+  footer .top {
+    text-align: center;
+  }
+  footer .top img {
+    height: 25vw;
+  }
+  footer .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 0 3vw;
+  }
+  footer .bottom .one {
+    display: flex;
+    flex-direction: column;
+    background-color: #223121;
+    padding: 2vh 3vw;
+    border-radius: 2vw;
+    gap: 5vh;
+  }
+  footer .bottom .one img {
+    height: 6vw;
+  }
+  footer .bottom .one div {
+    display: flex;
+    gap: 3vw;
+  }
+  footer .bottom .one div p {
+    margin-top: auto;
+  }
+  footer .bottom .two {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+  footer .bottom .two p {
+    font-weight: bold;
+  }
+  footer .bottom .two .link {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+  }
+  footer .bottom .two .link a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.664);
+  }
+  footer .bottom .three {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  footer .bottom .three p {
+    font-weight: bold;
+  }
+  footer .bottom .three img {
+    height: 6vw;
+  }
+  footer .bottom .three .link {
+    display: flex;
+    gap: 3vw;
+  }
+  footer .bottom .three .link a {
+    padding: 1vh 3vw;
+    border-radius: 50vw;
+    background-color: white;
+  }
+  footer .bottom .three .link a img {
+    padding-top: 0.5vh;
+  }
+  footer hr {
+    margin: 2vh 3vw;
+  }
+  footer .sign {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 0 3vw;
+  }
+  /*Style du footer*/
+  /*Style du devis*/
+  .form-container {
+    gap: 3vh;
+    padding: 5vh 0;
+  }
+  .form-container p {
+    padding: 0 4vw;
+    font-size: 4vw;
+  }
+  .form-container form {
+    width: 70vw;
+    gap: 3vh;
+  }
+  .form-container form #name, .form-container form #email, .form-container form #tel, .form-container form textarea {
+    padding: 1.5vh;
+  }
+  /* Form element styles */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: "Marcellus", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+  }
+  button:focus,
+  input:focus,
+  optgroup:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+  }
+  /* Placeholder styles */
+  input::placeholder,
+  textarea::placeholder {
+    font-family: "Marcellus", serif;
+    font-size: 4vw; /* Ajustez la taille selon vos besoins */
+    opacity: 1; /* Assurez-vous que le texte soit entièrement opaque */
+  }
+  /* Specific styles for iOS */
+  @supports (-webkit-touch-callout: none) {
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 4vw; /* Ajustez la taille selon vos besoins */
+    }
+  }
+  .image-container {
+    margin: 3vh 0;
+  }
+  .image-track {
+    padding-top: 2.5vh;
+    margin-bottom: 2vh;
+  }
+  .image-track img {
+    margin: 0 0.5vw;
+    width: 50vw;
+    height: 20vh;
+  }
+  .title-event {
+    font-size: 5vw;
+  }
+  .section-e {
+    padding: 0 10vw;
+    padding-bottom: 2vh;
+  }
+  .section-e p {
+    line-height: 4vh;
+    font-size: 4vw;
+  }
+  .section-e .section-title {
+    font-size: 5vw;
+  }
+}
+.centered-paragraph {
+  font-size: 5vw;
+}
+
+/* Téléphones en mode paysage */
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (min-height: 0px) and (max-height: 500px) {
+  /* Styles pour petites tablettes */
+  /* Style de la navbar */
+  nav {
+    padding: 0.5vh 3vw;
+    box-shadow: 0vh 0.25vh 1.25vh rgba(0, 0, 0, 0.05);
+    margin-bottom: 1vh;
+  }
+  nav .logo {
+    height: 10vw;
+  }
+  nav .hamburger {
+    display: block;
+    height: 4vw;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  nav .nav-link {
+    display: none;
+  }
+  .nav-link-mobile {
+    background-color: rgb(255, 255, 255);
+    padding: 2vh 0;
+  }
+  .nav-link-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: 2vw;
+  }
+  .nav-link-mobile ul li a {
+    text-decoration: none;
+    color: #5A7F54;
+    font-size: 2vw;
+  }
+  /* Style de la navbar*/
+  /* Style de la page contact*/
+  .fcontact p {
+    font-size: 2vw;
+  }
+  .fcontact .joignable {
+    padding-top: 1.3vh;
+  }
+  .fcontact .phone-join {
+    height: 2.5vw;
+    padding-bottom: 1.5vh;
+  }
+  .ecoute-container #e3 {
+    font-size: 2vw;
+  }
+  /* Style de la page contact*/
+  /*syle de la page home*/
+  .first-bg-image-home-computer-container .left {
+    gap: 2vh;
+  }
+  .first-bg-image-home-computer-container .left #p1 {
+    font-size: 3vw;
+  }
+  .first-bg-image-home-computer-container .left #p2 {
+    font-size: 2vw;
+    line-height: 5vh;
+  }
+  .first-bg-image-home-computer-container .left a {
+    font-size: 2vw;
+  }
+  .body-menu {
+    font-size: 2vw;
+  }
+  .body-menu .title {
+    font-size: 3vw;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p #p2 {
+    line-height: 5vh;
+  }
+  .body-menu .value .bodyyy .home #title, .body-menu .value .bodyyy .pro #title, .body-menu .value .bodyyy .ecoute #title, .body-menu .value .bodyyy .dispo #title, .body-menu .value .bodyyy .conf #title {
+    font-size: 3vw;
+  }
+  .body-menu .value .bodyyy .home #text, .body-menu .value .bodyyy .pro #text, .body-menu .value .bodyyy .ecoute #text, .body-menu .value .bodyyy .dispo #text, .body-menu .value .bodyyy .conf #text {
+    line-height: 5vh;
+  }
+  .body-menu .prestations .bodyyyy {
+    gap: 5vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa {
+    gap: 4vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .titre {
+    font-size: 3vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content {
+    gap: 8vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire p {
+    font-size: 2vw;
+    border-radius: 5vw 0 0 0;
+    padding: 0.7vh 3vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement p {
+    font-size: 2vw;
+    border-radius: 5vw 0 0 0;
+    padding: 0.7vh 3vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation p {
+    font-size: 2vw;
+    border-radius: 5vw 0 0 0;
+    padding: 0.7vh 3vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement p {
+    font-size: 2vw;
+    border-radius: 5vw 0 0 0;
+    padding: 0.7vh 3vw;
+  }
+  .body-menu .prestations .bodyyyy .prestaa div a {
+    font-size: 2vw;
+  }
+  .body-menu .prestations .bodyyyy .formula {
+    gap: 4vh;
+  }
+  .body-menu .prestations .bodyyyy .formula .titre {
+    font-size: 4vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content {
+    gap: 4vh;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula {
+    font-size: 2vw;
+  }
+  .body-menu .prestations .bodyyyy .formula div a {
+    font-size: 2vw;
+  }
+  .formula {
+    gap: 4vh;
+  }
+  .formula .titre {
+    font-size: 4vw;
+  }
+  .formula .formula-content {
+    gap: 4vh;
+  }
+  .formula .formula-content .presta-formula {
+    font-size: 2vw;
+  }
+  .title-singulier p {
+    font-size: 3vw;
+  }
+  .title-singulier img {
+    margin-top: -10vh;
+  }
+  #sur {
+    padding-bottom: 6vh;
+  }
+  /*syle de la page home*/
+  .denous p {
+    font-size: 2vw;
+  }
+  .container-nous {
+    font-size: 2vw;
+  }
+  .container-nous .section p {
+    line-height: 5.5vh;
+  }
+  /*Style du footer*/
+  footer {
+    font-size: 2vw;
+  }
+  /*Style du footer*/
+  /*Style du devis*/
+  .form-container {
+    gap: 3vh;
+    padding: 5vh 0;
+  }
+  .form-container p {
+    padding: 0 6vw;
+    font-size: 2vw;
+  }
+  .form-container form {
+    width: 70vw;
+    gap: 6vh;
+  }
+  .form-container form #name, .form-container form #email, .form-container form #tel, .form-container form textarea {
+    padding: 1.5vh;
+  }
+  /* Form element styles */
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-size: 2vw;
+  }
+  /* Placeholder styles */
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 2vw; /* Ajustez la taille selon vos besoins */
+  }
+  /* Specific styles for iOS */
+  @supports (-webkit-touch-callout: none) {
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 2vw; /* Ajustez la taille selon vos besoins */
+    }
+  }
+  .image-container {
+    margin: 5vh 0;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap; /* Prevent line breaks */
+    background-color: #5A7F54;
+  }
+  .image-track {
+    padding-top: 2.5vh;
+    margin-bottom: 2vh;
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+  }
+  .image-track img {
+    margin: 0 0.5vw;
+    width: 35vw;
+    height: 40vh;
+    display: inline-block;
+    border-radius: 2vw;
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .title-event {
+    font-size: 2vw;
+  }
+  .title-event span {
+    color: #5A7F54;
+  }
+  .section-e p {
+    font-size: 2vw;
+    line-height: 5vh;
+  }
+  .section-e .section-title {
+    font-size: 3vw;
+  }
+  .centered-paragraph {
+    font-size: 3vw;
+  }
+}
+/* Téléphones en mode paysage */
+/*Style pour les tablettes*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (min-height: 501px) {
+  /*  Style de la navbar */
+  nav {
+    padding: 2vh 3vw;
+  }
+  nav .logo {
+    height: 6.5vw;
+  }
+  nav .hamburger {
+    display: block;
+    height: 5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  nav .nav-link {
+    display: none;
+  }
+  .nav-link-mobile {
+    padding: 2vh 0;
+    background-color: rgb(255, 255, 255);
+  }
+  .nav-link-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    gap: 4vw;
+  }
+  .nav-link-mobile ul li a {
+    text-decoration: none;
+    color: #5A7F54;
+    font-size: 1.8vw;
+  }
+  .nav-link-mobile {
+    display: none;
+  }
+  /*  Style de la navbar */
+  /* Style de la page contact */
+  .fcontact p {
+    font-size: 1.8vw;
+  }
+  /* Style de la page contact*/
+  /*syle de la page home*/
+  .first-bg-image-home-computer {
+    position: relative;
+    width: 100%;
+    height: 45vh; /* ou une autre hauteur appropriée */
+    overflow: hidden;
+  }
+  .background-image {
+    opacity: 30%;
+    position: absolute;
+    top: 25vh;
+    left: 50%;
+    width: 100%;
+    height: 48vh;
+    transform: translate(-50%, -50%) scale(0.95);
+    object-fit: cover;
+    z-index: -1; /* Placer l'image derrière le contenu */
+  }
+  .first-bg-image-home-computer-container {
+    background: linear-gradient(to top, #F1EFF0, transparent); /*#F1EFF0*/
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    color: white; /* Pour que le contenu soit lisible sur l'image */
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+  .first-bg-image-home-computer-container .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+  .first-bg-image-home-computer-container .left p {
+    padding: 0;
+    margin: 0;
+  }
+  .first-bg-image-home-computer-container .left #p1 {
+    font-size: 3vw;
+    color: #223121;
+    width: 55vw;
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .first-bg-image-home-computer-container .left #p2 {
+    font-size: 1.8vw;
+    width: 55vw;
+    color: #223121;
+    line-height: 3vh;
+  }
+  .first-bg-image-home-computer-container .left #p2 .gold {
+    color: #1c8819;
+    font-weight: bold;
+  }
+  .first-bg-image-home-computer-container .left a {
+    padding: 2.5vh 2.5vw;
+    width: 18.9vw;
+    border-radius: 0 5vw 5vw 5vw;
+    color: white;
+    background-color: #5A7F54;
+    border: none;
+    text-decoration: none;
+    font-size: 1.8vw;
+  }
+  .first-bg-image-home-computer-container .left a:hover {
+    background-color: #51714c;
+  }
+  .first-bg-image-home-computer-container .right {
+    margin-right: 2vw;
+    position: relative;
+    width: 35vw;
+    z-index: 1; /* Assurez-vous que .right a un z-index plus élevé */
+  }
+  .first-bg-image-home-computer-container .right::before {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Ajustez la position verticale du fond */
+    right: -20px; /* Ajustez la position horizontale du fond */
+    width: 100%;
+    height: 100%;
+    background-color: #5A7F54; /* Couleur de fond */
+    z-index: 0; /* Assurez-vous que le pseudo-élément a un z-index plus bas */
+  }
+  .first-bg-image-home-computer-container .right .background-image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("image/prestation.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* L'image de fond doit être au-dessus du pseudo-élément */
+  }
+  .first-bg-image-home-computer-container .right a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.8vw;
+    padding: 2vh 1vw;
+    border: #5A7F54 solid 1px;
+    border-bottom: #d1a839 solid 2px;
+    margin: 2vh 2vw;
+    z-index: 2; /* Le lien doit être au même niveau ou plus haut que le conteneur */
+  }
+  .first-bg-image-home-computer-container .right a:hover {
+    border: #d1a839 solid 2px;
+    border-bottom: #d1a839 solid 2px;
+  }
+  .div2 {
+    display: none;
+  }
+  .body-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.8vw;
+    gap: 10vh;
+    z-index: 1;
+  }
+  .body-menu p {
+    margin: 0;
+    padding: 0;
+  }
+  .body-menu .vision .bodyy {
+    padding: 0vh 12vw;
+  }
+  .body-menu .vision .bodyy .g2 {
+    display: flex;
+  }
+  .body-menu .vision .bodyy .g2 .vert2 {
+    padding-left: 1.8vw;
+    background-color: #5A7F54;
+    margin-top: 3.5vh;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(34, 255, 0, 0.0784313725);
+    padding: 3vh 2vw;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p #p1 {
+    color: #223121;
+    font-size: 2vw;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p #p2 {
+    line-height: 4vh;
+    color: #5A7F54;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vision-p #p2 .gold {
+    color: #5A7F54;
+    font-weight: bold;
+  }
+  .body-menu .vision .bodyy .g2 .g1 .vert1 {
+    padding: 1.8vh 0;
+    background-color: #5A7F54;
+    margin-left: 2vw;
+  }
+  .body-menu .value .bodyyy {
+    font-family: "Montserrat", sans-serif;
+    color: #5A7F54;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+  }
+  .body-menu .value .bodyyy .home, .body-menu .value .bodyyy .pro, .body-menu .value .bodyyy .ecoute, .body-menu .value .bodyyy .dispo, .body-menu .value .bodyyy .conf {
+    width: 30%;
+    padding: 0 5vw;
+  }
+  .body-menu .value .bodyyy .home #title, .body-menu .value .bodyyy .pro #title, .body-menu .value .bodyyy .ecoute #title, .body-menu .value .bodyyy .dispo #title, .body-menu .value .bodyyy .conf #title {
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  .body-menu .value .bodyyy .home img, .body-menu .value .bodyyy .pro img, .body-menu .value .bodyyy .ecoute img, .body-menu .value .bodyyy .dispo img, .body-menu .value .bodyyy .conf img {
+    height: 10vw;
+  }
+  .body-menu .value .bodyyy .home .gold, .body-menu .value .bodyyy .pro .gold, .body-menu .value .bodyyy .ecoute .gold, .body-menu .value .bodyyy .dispo .gold, .body-menu .value .bodyyy .conf .gold {
+    color: #5A7F54;
+    font-weight: bold;
+  }
+  .body-menu .prestations .bodyyyy {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    gap: 5vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .titre {
+    margin: 0;
+    padding: 0;
+    color: #5A7F54;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire {
+    background-image: url("image/ceremonie-fu.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 40vh;
+    width: 60vw;
+    border-radius: 2vw 2vw 0 2vw;
+    transition: 0.3s;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .funeraire p {
+    color: white;
+    font-size: 1.37vw;
+    background-color: #5A7F54;
+    border-radius: 3vw 0 0 0;
+    padding: 1vh 1vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement {
+    background-image: url("image/enterrement.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 40vh;
+    width: 60vw;
+    border-radius: 2vw 2vw 0 2vw;
+    transition: 0.3s;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .enterrement p {
+    color: white;
+    font-size: 1.37vw;
+    background-color: #5A7F54;
+    border-radius: 3vw 0 0 0;
+    padding: 1vh 1vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation {
+    background-image: url("image/organisation.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 40vh;
+    width: 60vw;
+    border-radius: 2vw 2vw 0 2vw;
+    transition: 0.3s;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .organisation p {
+    color: white;
+    font-size: 1.37vw;
+    background-color: #5A7F54;
+    border-radius: 3vw 0 0 0;
+    padding: 1vh 1vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement {
+    background-image: url("image/hand.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 40vh;
+    width: 60vw;
+    border-radius: 2vw 2vw 0 2vw;
+    transition: 0.3s;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .body-menu .prestations .bodyyyy .prestaa .prestation-content .accompagnement p {
+    color: white;
+    font-size: 1.37vw;
+    background-color: #5A7F54;
+    border-radius: 3vw 0 0 0;
+    padding: 1vh 1vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+  }
+  .body-menu .prestations .bodyyyy .prestaa div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .body-menu .prestations .bodyyyy .prestaa div a {
+    color: #d1a839;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: #d1a839 solid 2px;
+    border-bottom: #d1a839 solid 2px;
+    font-family: "Marcellus";
+    height: 7vh;
+    width: 15vw;
+    padding-top: 3vh;
+  }
+  .body-menu .prestations .bodyyyy .prestaa div a:hover {
+    color: white;
+  }
+  .body-menu .prestations .bodyyyy .formula {
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+  }
+  .body-menu .prestations .bodyyyy .formula .titre {
+    margin: 0;
+    padding: 0;
+    color: #5A7F54;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vw;
+    align-items: center;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+    font-size: 1.39vw;
+    background-color: rgba(34, 255, 0, 0.0784313725);
+    color: #5A7F54;
+    padding: 1vh 0vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list li {
+    position: relative;
+    padding-top: 2vh;
+    padding-left: 3vw; /* Adjust this value based on your icon size */
+    text-align: left;
+    margin: 0 2vw;
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula ul.custom-list li::before {
+    padding-top: 2vh;
+    content: "\f00c"; /* FontAwesome 'check' icon unicode */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: green; /* You can change the color as needed */
+  }
+  .body-menu .prestations .bodyyyy .formula .formula-content .presta-formula p {
+    top: 0;
+    font-weight: bold;
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    background-color: #223121;
+    margin-top: -1vh;
+    border-radius: 2vw 2vw 0vw 0vw;
+    padding: 2vh 6vw;
+  }
+  .body-menu .prestations .bodyyyy .formula div a {
+    color: #d1a839;
+    text-decoration: none;
+    font-size: 1.5vw;
+    border: #d1a839 solid 2px;
+    border-bottom: #d1a839 solid 2px;
+    font-family: "Marcellus";
+    height: 7vh;
+    width: 15vw;
+    padding-top: 3vh;
+  }
+  .body-menu .prestations .bodyyyy .formula div a:hover {
+    color: white;
+  }
+  .formula {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 7vh;
+  }
+  .formula .titre {
+    margin: 0;
+    padding: 0;
+    color: #5A7F54;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+  }
+  .formula .formula-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+  }
+  .formula .formula-content .presta-formula {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 2vw;
+    font-size: 1.39vw;
+    background-color: rgba(34, 255, 0, 0.0784313725);
+    color: #5A7F54;
+    padding: 1vh 0vw;
+  }
+  .formula .formula-content .presta-formula ul.custom-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  .formula .formula-content .presta-formula ul.custom-list li {
+    position: relative;
+    padding-top: 2vh;
+    padding-left: 3vw; /* Adjust this value based on your icon size */
+    text-align: left;
+    margin: 0 2vw;
+  }
+  .formula .formula-content .presta-formula ul.custom-list li::before {
+    padding-top: 2vh;
+    content: "\f00c"; /* FontAwesome 'check' icon unicode */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: green; /* You can change the color as needed */
+  }
+  .formula .formula-content .presta-formula p {
+    top: 0;
+    font-weight: bold;
+    font-family: "Petrona", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    background-color: #223121;
+    margin-top: -1vh;
+    border-radius: 2vw 2vw 0vw 0vw;
+    padding: 2vh 0vw;
+    text-align: center;
+  }
+  .formula .formula-content #sur {
+    margin: auto 0;
+    height: 19vh;
+  }
+  .title-singulier {
+    color: #d1a839;
+  }
+  .title-singulier p {
+    font-size: 2.5vw;
+  }
+  .title-singulier img {
+    height: 13vw;
+    margin-top: -4vh;
+    margin-bottom: -4vw;
+  }
+  .hvr-bounce-to-top:before {
+    background: #d1a839 !important;
+  }
+  /*syle de la page home*/
+}
+/*Style pour les tablettes*/
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+  nav {
+    background-color: #67d826;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

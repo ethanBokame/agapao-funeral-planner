@@ -1,0 +1,13 @@
+.center-to-outer {
+    opacity: 0;
+    width: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 10s ease-out, opacity 10s ease-out;
+}
+
+.aos-animate.center-to-outer {
+    opacity: 1;
+    width: 13%;
+}
